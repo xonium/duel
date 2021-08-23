@@ -1,0 +1,90 @@
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background-color: #035397;
+}
+
+.animation-root {
+  width: 1px;
+  background-color: red;
+  height: 1px;
+}
+
+.blue {
+  background-color: #001e6c;
+  color: #ffaa4c;
+}
+
+h1 {
+  font-size: 65px;
+  margin: 0;
+}
+
+.orange {
+  background-color: #ffaa4c;
+  color: #001e6c;
+}
+
+.background {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 25px;
+  animation: fadein ease-in 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+h1 {
+    animation: fadein ease-in 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;    
+}
+
+.animate-from-top {
+  animation: fromtop 0.2s ease-in;
+}
+
+.animate-from-bottom {
+  animation: frombottom 0.2s ease-in;
+}
+
+@keyframes fromtop {
+  from {
+    top: -300px;
+  }
+  to {
+    top: 0px;
+  }
+}
+
+@keyframes frombottom {
+    from {
+      bottom: -300px;
+    }
+    to {
+      bottom: 0px;
+    }
+  }
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+      }
+      to {
+        opacity: 100%;
+      }    
+}
